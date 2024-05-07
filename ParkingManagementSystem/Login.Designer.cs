@@ -40,6 +40,7 @@
             ptbl = new TextBox();
             lbtn = new Button();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 0, 192);
+            panel1.Controls.Add(label4);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
@@ -62,7 +64,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(62, 178);
+            label8.Location = new Point(61, 237);
             label8.Name = "label8";
             label8.Size = new Size(74, 28);
             label8.TabIndex = 4;
@@ -73,7 +75,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(36, 135);
+            label7.Location = new Point(35, 194);
             label7.Name = "label7";
             label7.Size = new Size(128, 28);
             label7.TabIndex = 3;
@@ -84,7 +86,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(56, 94);
+            label6.Location = new Point(55, 153);
             label6.Name = "label6";
             label6.Size = new Size(77, 28);
             label6.TabIndex = 2;
@@ -95,7 +97,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(43, 48);
+            label5.Location = new Point(42, 107);
             label5.Name = "label5";
             label5.Size = new Size(105, 28);
             label5.TabIndex = 1;
@@ -167,6 +169,17 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label4.ForeColor = Color.FromArgb(0, 64, 0);
+            label4.Location = new Point(21, 355);
+            label4.Name = "label4";
+            label4.Size = new Size(145, 28);
+            label4.TabIndex = 8;
+            label4.Text = "Parking Lot 1.0";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -205,5 +218,6 @@
         private Label label8;
         private Label label7;
         private Label label6;
+        private Label label4;
     }
 }
