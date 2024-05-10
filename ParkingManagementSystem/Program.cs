@@ -6,7 +6,7 @@ namespace ParkingManagementSystem
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new StartPage());
+            Application.Run(new Login());
         }
     }
 }

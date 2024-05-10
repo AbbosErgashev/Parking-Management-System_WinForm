@@ -1,0 +1,31 @@
+Data Source=ACER;Initial Catalog=ParkingLotDB;Integrated Security=True;Encrypt=False
+
+CREATE TABLE [dbo].[CarsTbl] (
+    [CNum]     INT          IDENTITY (1, 1) NOT NULL,
+    [PNumber]  VARCHAR (50) NOT NULL,
+    [Driver]   VARCHAR (50) NOT NULL,
+    [Gender]   VARCHAR (50) NOT NULL,
+    [CarType]  VARCHAR (50) NOT NULL,
+    [CarColor] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CNum] ASC)
+);
+
+CREATE TABLE [dbo].[ParkingTbl] (
+    [PCode]    INT  IDENTITY (1, 1) NOT NULL,
+    [Car]      INT  NOT NULL,
+    [Date]     DATE NOT NULL,
+    [Duration] INT  NOT NULL,
+    [Amount]   INT  NOT NULL,
+    [Place]    INT  NOT NULL,
+    PRIMARY KEY CLUSTERED ([PCode] ASC),
+    CONSTRAINT [FK1] FOREIGN KEY ([Car]) REFERENCES [dbo].[CarsTbl] ([CNum]),
+    CONSTRAINT [FK2] FOREIGN KEY ([Place]) REFERENCES [dbo].[PlaceTbl] ([PlNum])
+);
+
+CREATE TABLE [dbo].[PlaceTbl] (
+    [PlNum]     INT          IDENTITY (1, 1) NOT NULL,
+    [Pposition] VARCHAR (50) NOT NULL,
+    [PStatus]   VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([PlNum] ASC)
+);
+
